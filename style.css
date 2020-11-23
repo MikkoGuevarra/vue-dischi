@@ -7,6 +7,8 @@
 #root {
     max-width: 1170px;
     margin: 0 auto;
+    background-color: #232427;
+    color: white;
 }
 
 .card-container {
@@ -23,7 +25,14 @@
     align-items: center;
     flex-direction: column;
     margin: 20px;
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2);
 }
+
+.music-card:hover {
+    transform: scale(1.2);
+}
+
 
 .music-card img {
     width: 150px;
@@ -35,5 +44,11 @@
 
 .select-part {
     height: 100px;
-    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
 }
