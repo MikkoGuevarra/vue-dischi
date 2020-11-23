@@ -3,7 +3,21 @@ var app =  new Vue ({
     data: {
         discs: [],
         genre: [],
-        selectedValue: ''
+        selectedValue: '',
+        selectedDate: 'oldest'
+    },
+    methods: {
+        setDate(event) {
+            console.log(event.target.value);
+            if (event.target.value == this.selectedDate) {
+                this.discs.sort((a, b) => parseFloat(a.year) - parseFloat(b.year));
+                console.log(this.discs);
+            } else  {
+                console.log('newwww');
+                this.discs.sort((b, a) => parseFloat(a.year) - parseFloat(b.year));
+                console.log(this.discs);
+            }
+        }
     },
     mounted() {
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')

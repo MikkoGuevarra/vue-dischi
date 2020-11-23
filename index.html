@@ -16,6 +16,12 @@
                     <option v-for="type in genre" :value="type">{{type}}</option>
                 </select>
 
+                <select name="by-date" id="date" @change="setDate($event)">
+                    <option value="" disabled selected>All</option>
+                    <option value="oldest">oldest</option>
+                    <option value="newest">newest</option>
+                </select>
+
             </div>
             <div class="card-container">
                 <div class="music-card" v-if="selectedValue == disc.genre || selectedValue == ''" v-for="disc in discs">
