@@ -5,22 +5,6 @@ var app =  new Vue ({
         genre: [],
         selectedValue: ''
     },
-    methods : {
-        onChange(event) {
-            console.log(event.target.value);
-            console.log(this.selectedValue);
-            // this.discs.forEach((item, i) => {
-            //     if (item.genre == event.target.value) {
-            //         this.selectedValue = true;
-            //     }
-            // });
-        },
-        conditon () {
-            if (true) {
-
-            }
-        }
-    },
     mounted() {
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
         .then(result =>{
