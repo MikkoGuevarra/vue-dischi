@@ -14,6 +14,11 @@ var app =  new Vue ({
             //         this.selectedValue = true;
             //     }
             // });
+        },
+        conditon () {
+            if (true) {
+
+            }
         }
     },
     mounted() {
