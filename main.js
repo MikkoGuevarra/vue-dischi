@@ -3,18 +3,17 @@ var app =  new Vue ({
     data: {
         discs: [],
         genre: [],
-        selectedValue: false
+        selectedValue: ''
     },
     methods : {
         onChange(event) {
             console.log(event.target.value);
-            this.discs.forEach((item, i) => {
-                if (item.genre == event.target.value) {
-                    selectedValue = true;
-                    console.log(selectedValue);
-                }
-
-            });
+            console.log(this.selectedValue);
+            // this.discs.forEach((item, i) => {
+            //     if (item.genre == event.target.value) {
+            //         this.selectedValue = true;
+            //     }
+            // });
         }
     },
     mounted() {
