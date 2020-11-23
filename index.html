@@ -10,12 +10,13 @@
     <body>
         <div id="root">
             <div class="select-part">
-                <select name="genre" id="genre" >
+                <select name="genre" id="genre" @change="onChange($event)">
+                    <option value="null" disabled selected >select genre</option>
                     <option v-for="type in genre" :value="type">{{type}}</option>
                 </select>
 
             </div>
-            <div class="card-container">
+            <div v-show="selectedValue" class="card-container">
                 <div class="music-card" v-for="disc in discs">
                     <img :src="disc.poster" :alt="disc.title">
                     <h3 class="album">{{ disc.title }}</h3>
