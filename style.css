@@ -32,3 +32,8 @@
 .album {
     margin: 10px 0;
 }
+
+.select-part {
+    height: 100px;
+    border: 2px solid black;
+}

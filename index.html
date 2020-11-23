@@ -9,6 +9,12 @@
     </head>
     <body>
         <div id="root">
+            <div class="select-part">
+                <select name="genre" id="genre" >
+                    <option v-for="type in genre" :value="type">{{type}}</option>
+                </select>
+
+            </div>
             <div class="card-container">
                 <div class="music-card" v-for="disc in discs">
                     <img :src="disc.poster" :alt="disc.title">
