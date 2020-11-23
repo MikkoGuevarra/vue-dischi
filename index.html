@@ -16,7 +16,7 @@
                 </select>
 
             </div>
-            <div v-show="selectedValue" class="card-container">
+            <div class="card-container">
                 <div class="music-card" v-for="disc in discs">
                     <img :src="disc.poster" :alt="disc.title">
                     <h3 class="album">{{ disc.title }}</h3>
