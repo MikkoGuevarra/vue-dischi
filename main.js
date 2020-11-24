@@ -4,18 +4,21 @@ var app =  new Vue ({
         discs: [],
         genre: [],
         selectedValue: '',
-        selectedDate: 'oldest'
+        selectedDate: ''
     },
     methods: {
         setDate(event) {
-            console.log(event.target.value);
-            if (event.target.value == this.selectedDate) {
+            this.selectedDate = event.target.value;
+            console.log(this.selectedDate);
+            if (this.selectedDate == 'oldest') {
                 this.discs.sort((a, b) => parseFloat(a.year) - parseFloat(b.year));
                 console.log(this.discs);
-            } else  {
+            } else if (this.selectedDate == 'newest')  {
                 console.log('newwww');
-                this.discs.sort((b, a) => parseFloat(a.year) - parseFloat(b.year));
+                this.discs.sort((a, b) => parseFloat(b.year) - parseFloat(a.year));
                 console.log(this.discs);
+            } else if (this.selectedDate == '') {
+                console.log('normal');
             }
         }
     },
